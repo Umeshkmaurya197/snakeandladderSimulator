@@ -56,7 +56,7 @@ public class SnakeAndLadderSimulator {
 		else 
 		{
 			visited=start;
-			System.out.println(" ");
+			System.out.println(" You have to roll the dice for entry in game ");
 		}
 		
 
