@@ -12,5 +12,13 @@ public class SnakeAndLadderSimulator {
 	    int end=100;
 	    position[start]=visited;
 	    System.out.println("\n Your current position is  : "+position[start]);	
+	    
+	    
+	    while(start<=10)
+	    	{
+	    	int rolldice =(int) (1 + Math.floor(Math.random()*10) % 6) ;
+	    	System.out.println("dice value: "+rolldice);
+	    	start++;
+	    	}
 	}
 }
