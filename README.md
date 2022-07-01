@@ -1,1 +1,1 @@
- This is repository  contains snake and ladder project. 
+ This is repository  contains snake and ladder simulator project. 
