@@ -10,6 +10,7 @@ public class SnakeAndLadderSimulator {
 		int rolldice = 0;
 		int opening = 0;
 		int end = 100;
+		int count = 0;
 		while (opening != 1) {
 			opening = (int) (1 + Math.floor(Math.random() * 10) % 6); // to get chance to entry in game
 			visited = opening;
@@ -19,7 +20,8 @@ public class SnakeAndLadderSimulator {
 			while (visited != end) {
 				rolldice = (int) (1 + Math.floor(Math.random() * 10) % 6); // roll the the dice to get number
 				visited = visited + rolldice;
-				if (visited < 100) {
+				count++;
+				if (visited < end) {
 
 					// Ladders starts from here
 					if (visited == 2)
@@ -52,15 +54,13 @@ public class SnakeAndLadderSimulator {
 					else if (visited == 99)
 						visited = 35;
 
-					System.out.println("     Current position is  : " + visited + " ,  -   Rolldice value : " + rolldice);
-				} else if (visited == end) {
-					System.out.println("     Current position is  : " + visited + " ,     Rolldice value : " + rolldice);
 				} else if (visited > end) {
-					visited=visited-rolldice;
-					System.out.println("     Skip Step");
+					visited = visited - rolldice;
+					System.out.println("  Skip Step");
 				}
-
+				System.out.println("  Current position is  : " + visited + " ,     Rolldice value : " + rolldice);
 			}
+			System.out.println("\n  Game Report : you have played " + count + " times to win this game .");
 		} else {
 			visited = start;
 			System.out.println(" You have to roll the dice for entry in game ");
